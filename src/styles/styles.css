@@ -1,10 +1,688 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+  --primary-color: #f99ddc;
+  --primary-color-light: #020202;
+  --secondary-color: #ef62c2;
+  --extra-light: rgba(238, 229, 229, 0.5);
+  --white: #ffffff;
+  --max-widht: 1200px;
+  --header-font: "Poppins", san-serif;
 }
 
-h1{
-    color: blue;
-    font-size: 42px;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.section_container {
+  max-width: var(--max-widht);
+  margin: auto;
+  padding: 5rem 1rem;
+}
+
+.section_header {
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  font-weight: 800;
+  font-family: var(--header-font);
+  text-align: center;
+}
+
+.section_subheader {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  cursor: pointer;
+  color: var(--white);
+}
+
+img {
+  width: 100%;
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: var(--white);
+  background-color: var(--primary-color);
+}
+
+/* ini css halaman header */
+.header {
+  background-image: linear-gradient(to top, var(--primary-color), transparent),
+    url("/src/public/img/gambar1.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.nav {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid var(--extra-light);
+}
+
+.nav_bar {
+  max-width: var(--max-widht);
+  margin: auto;
+  padding: 1.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  position: relative;
+}
+
+.nav_logo a {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.nav_links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.link a {
+  padding: 1.5rem 5px;
+  font-weight: 500;
+  color: var(--white);
+  transition: 0.3s;
+}
+
+.link a:hover,
+.dropdown-content a:hover {
+  color: #f99ddc;
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  top: 100%; /* Positions the dropdown directly below the parent */
+}
+
+.dropdown-content a {
+  color: var(--white);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.link span {
+  padding: 1rem 0;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.header_container {
+  padding: 12rem 1rem;
+}
+
+.header_container h1 {
+  margin-bottom: 1rem;
+  max-width: 700px;
+  font-size: 4rem;
+  font-family: var(--header-font);
+}
+
+.header_container h4 {
+  position: relative;
+  margin-left: 3rem;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.header_container h4:after {
+  position: absolute;
+  content: "";
+  left: -3rem;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 2px;
+  width: 2rem;
+  background-color: var(--white);
+}
+/* ini akhir css halaman header */
+
+/* ini css halaman antropometri */
+.Antropometri_container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  align-items: center;
+}
+
+.Antropometri_container :is(.sectio_header, .section_subheader) {
+  text-align: left;
+}
+
+.Antropometri_flex {
+  margin: 2rem 0;
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  color: rgb(249, 249, 249);
+  background-color: #e440b0;
+}
+
+.Antropometri_card {
+  flex: 1 1 150px;
+  text-align: center;
+  border-right: 2px solid var(--primary-color);
+}
+
+.Antropometri_card:last-child {
+  border: none;
+}
+
+.Antropometri_card h4 {
+  margin-bottom: 5px;
+  font-size: 3rem;
+  font-weight: 600;
+  font-family: var(--header-font);
+}
+
+.Antropometri_card p {
+  font-size: 0.9rem;
+}
+
+.Antropometri_image img {
+  max-width: 450px;
+  margin: auto;
+}
+/* ini akhir css halaman antropometri */
+
+/* ini css halaman gizi */
+.gizi {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.5),
+    transparent
+  );
+}
+
+.gizi_grid {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.gizi_card {
+  max-width: 320px;
+  margin: auto;
+}
+
+.gizi_card:nth-child(2) {
+  transform: translateY(5rem);
+}
+
+.gizi_image {
+  position: relative;
+}
+
+.gizi_image::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 50%;
+  left: 0;
+  bottom: 0;
+  background-image: linear-gradient(to top, var(--primary-color), transparent);
+}
+
+.gizi_card_content {
+  padding: 0 2rem;
+  transform: translateY(-50%);
+}
+
+.gizi_card_content h4 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 800;
+  font-family: var(--header-font);
+  color: var(--secondary-color);
+}
+
+.gizi_card_content p {
+  margin-bottom: 2rem;
+}
+
+.gizi_btn {
+  padding: 0.75rem 1rem;
+  outline: none;
+  font-size: 1rem;
+  color: var(--white);
+  background-color: transparent;
+  border: 1px solid var(--white);
+  cursor: pointer;
+}
+/* ini akhir css halaman gizi */
+
+/* ini css halaman blogs */
+.blogs_container {
+  padding: 5rem 0;
+}
+
+.blogs_grid {
+  margin-top: 4rem;
+  padding-inline: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1em;
+}
+
+.blogs_card {
+  position: relative;
+}
+
+.blogs_card::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-image: linear-gradient(to top, var(--primary-color), transparent);
+}
+
+.blogs_content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  z-index: 1;
+}
+/* ini akhir css halaman blogs */
+
+/* ini css halaman news */
+.news_grid {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.news_card {
+  overflow: hidden;
+}
+
+.news_card img {
+  width: 100%;
+  height: 200px; /* Set the desired height for the images */
+  object-fit: cover;
+}
+
+.news_content {
+  padding: 2rem;
+  background-color: #f355c1;
+}
+
+.news_author {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.news_author img {
+  max-width: 30px;
+  border-radius: 100%;
+}
+
+.news_author p {
+  font-size: 0.9rem;
+  opacity: 0.75;
+}
+
+.news_content h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.news_footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.news_footer p {
+  font-size: 0.9rem;
+  opacity: 0.5;
+}
+
+.news_footer span a {
+  font-size: 1.5rem;
+  color: var(--white);
+  opacity: 0.75;
+}
+
+.news_btn {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+/* ini akhir css halaman news */
+
+/* ini css halaman logo website */
+.hero_container p {
+  text-align: center;
+  font-size: 12rem;
+  font-weight: 700;
+  background-image: url("/src/public/img/gambar1.jpg");
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px var(--extra-light);
+}
+/* ini akhir css halaman logo website */
+
+/* ini css halaman gallery */
+.gallery_container {
+  padding: 5rem 1rem;
+}
+
+.gallery_grid {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+
+.gallery_card {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery_card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery_content {
+  position: absolute;
+  left: 50%;
+  bottom: -8rem;
+  transform: translateX(-50%);
+  width: 100%;
+  padding: 2rem 1rem;
+  transition: 0.3s;
+  text-align: center;
+  background-image: linear-gradient(to top, var(--primary-color), transparent);
+}
+
+.gallery_content h4 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 800;
+  font-family: var(--header-font);
+}
+
+.gallery_card:hover .gallery_content {
+  bottom: 0;
+}
+
+/* ini akhir css halaman gallery */
+
+/* ini css halaman contact */
+.contact {
+  background-image: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0.05),
+    transparent
+  );
+}
+
+.contact_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: center;
+}
+
+.contact_card {
+  max-width: 250px;
+  margin: auto;
+  aspect-ratio: 1;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  border: 1px solid var(--extra-light);
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.contact_card span {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  transition: 0.3s;
+}
+
+.contact_card:hover span {
+  color: var(--secondary-color);
+}
+
+.contact_col h4 {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  font-weight: 800;
+  font-family: var(--header-font);
+}
+
+.contact_col h5 {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: var(--header-font);
+}
+
+.contact_card .emailtxt {
+  font-size: 15px;
+}
+/* ini akhri css halaman contact */
+
+/* ini css halaman footer */
+.footer {
+  background-color: #e440b0;
+}
+
+.footer_container {
+  text-align: center;
+}
+
+.footer_container h4 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.footer_socials {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.footer_socials span a {
+  font-size: 1.5rem;
+  color: var(--white);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.footer_socials span a:hover {
+  color: black;
+}
+
+.footer_container p {
+  max-width: 600px;
+  margin: auto;
+  margin-bottom: 4rem;
+}
+
+.footer_nav {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footer_link a {
+  font-weight: 500;
+  color: var(--white);
+}
+
+.footer_link a:hover {
+  font-weight: 500;
+  color: black;
+  transition: 0.3s;
+}
+
+.footer_bar {
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.8rem;
+  border-top: 1px solid var(--extra-light);
+}
+/* ini css akhri halaman footer */
+
+/* ini responsif */
+@media (max-width: 900px) {
+  .link:not(.search) {
+    display: none;
+  }
+
+  .Antropometri_container {
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+  }
+
+  .Antropometri_container :is(.section_header, .section_subheader) {
+    text-align: center;
+  }
+
+  .Antropometri_image {
+    grid-area: 1/1/2/2;
+  }
+
+  .gizi_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .blogs_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .news_grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .hero_container p {
+    font-size: 10rem;
+  }
+
+  .gallery_grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .contact_container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact_col:first-child {
+    grid-area: 1/1/2/3;
+    text-align: center;
+  }
+}
+
+/* ini responsife 600 */
+@media (max-width: 600px) {
+  .header_container {
+    text-align: center;
+  }
+
+  .header_container h4 {
+    margin-left: 0;
+  }
+
+  .Antropometri_card {
+    border: none;
+  }
+
+  .gizi_grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .gizi_card:nth-child(2) {
+    transform: translateY(0);
+  }
+
+  .blogs_grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .news_grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .hero_container p {
+    font-size: 6rem;
+  }
+
+  .gallery_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact_container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .contact_col:first-child {
+    grid-area: unset;
+  }
 }
