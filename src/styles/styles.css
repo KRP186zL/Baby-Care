@@ -79,19 +79,24 @@ body {
 }
 
 .nav {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.2);
   border-bottom: 1px solid var(--extra-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1.5rem 1rem;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 9999;
 }
 
 .nav_bar {
   max-width: var(--max-widht);
-  margin: auto;
-  padding: 1.5rem 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  position: relative;
 }
 
 .nav_logo a {
@@ -107,6 +112,10 @@ body {
   gap: 2rem;
 }
 
+.nav_links.open {
+  right: 0;
+}
+
 .link a {
   padding: 1.5rem 5px;
   font-weight: 500;
@@ -120,14 +129,24 @@ body {
   border-bottom: 2px solid var(--secondary-color);
 }
 
+.dropdown {
+  position: relative;
+}
+
 .dropdown-content {
+  list-style: none;
   display: none;
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.2);
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  top: 100%; /* Positions the dropdown directly below the parent */
+  top: 49px;
+}
+
+.dropdown-content li {
+  border-bottom: 1px solid var(--extra-light);
+  width: 200px;
 }
 
 .dropdown-content a {
@@ -139,6 +158,16 @@ body {
 
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+.hamburger {
+  display: none;
+}
+
+.hamburger button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 .link span {
@@ -292,6 +321,11 @@ body {
   background-color: transparent;
   border: 1px solid var(--white);
   cursor: pointer;
+}
+.gizi_btn:hover {
+  background-color: var(--white);
+  color: var(--primary-color);
+  transition: 0.3s;
 }
 /* ini akhir css halaman gizi */
 
@@ -592,8 +626,40 @@ body {
 
 /* ini responsif */
 @media (max-width: 900px) {
-  .link:not(.search) {
-    display: none;
+  .nav {
+    justify-content: space-between;
+    padding-inline: 1rem;
+  }
+  .nav_links {
+    flex-direction: column;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.2);
+    right: -2000px;
+    top: 77px;
+    width: 50%;
+    min-height: 100vh;
+    padding: 2rem;
+    transition: 0.3s ease-in-out;
+  }
+
+  .dropdown:hover {
+    margin-block: -1em;
+  }
+
+  .dropdown-content {
+    position: static;
+    background-color: transparent;
+    box-shadow: none;
+    margin-top: 20px;
+  }
+
+  .dropdown-content li {
+    border-bottom: none;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
   }
 
   .Antropometri_container {
