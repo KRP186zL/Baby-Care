@@ -8,38 +8,36 @@
     rel="stylesheet"
     />
     <script src="https://unpkg.com/scrollreveal"></script>
-    <title>Document</title>
+    <title>Baby Care</title>
 </head>
 <body>
     <!-- awal header -->
     <header id="Home" class="header">
         <nav class="nav">
-            <div class="nav_bar">
-                <div class="nav_logo"><a href="#">Baby Care.</a></div>
-                <ul class="nav_links">
+            <div class="nav_logo"><a href="#">Baby Care.</a></div>
+            <div class="nav_bar" >
+                <ul class="nav_links" id="navigationDrawer">
                     <li class="link"><a href="#home">Home</a></li>
                     <li class="link dropdown">
                         <a href="#" class="dropbtn">Stunting<i class="ri-arrow-down-s-line"></i></a>
-                        <div class="dropdown-content">
-                            <a href="#Antropometri">Antropometri</a>
-                            <a href="#stuntingCalculate">Stunting Calculate</a>
-                        </div>
+                        <ul class="dropdown-content">
+                            <li><a href="#antropometri">Antropometri</a></li>
+                            <li><a href="#stuntingCalculate">Stunting Calculate</a></li>
+                        </ul>
                     </li>
                     <li class="link"><a href="#gizi">Gizi</a></li>
                     <li class="link"><a href="#blog">Blog</a></li>
                     <li class="link"><a href="#news">News</a></li>
                     <li class="link"><a href="#gallery">Gallery</a></li>
                     <li class="link"><a href="#contact">Contact</a></li>
-                    <!-- <li class="link search">
-                        <span><i class="ri-search-line"></i></span>
-                    </li> -->
-                    <!-- Tambahkan drawer -->
                 </ul>
             </div>            
+            <div class="hamburger"><button id="hamburgerButton"><i class="ri-menu-fill" style="font-size: 1.5rem; color: white;"></i></button></div>
         </nav>
+        
         <div class="section_container header_container">
-            <h1>Lorem ipsum dolor sit amet</h1>
-            <h4>Lorem ipsum dolor sit </h4>
+            <h1>BABY CARE</h1>
+            <h4>Panduan untuk sang bunda</h4>
             <button class="btn">
             Read more<i class="ri-arrow-right-line"></i>
             </button>
@@ -47,317 +45,315 @@
     </header>
 <!-- akhir header -->
 
-<main class="main">
-    <!-- ini halaman Antropometri -->
-    <section class="Antropometri" id="Antropometri">
-        <div class="section_container Antropometri_container">
-            <div class="Antropometri_content">
-                <h2 class="section_header">Antropometri</h2>
+    <main class="main" id="main">
+        <!-- ini halaman Antropometri -->
+        <section class="Antropometri" id="antropometri">
+            <div class="section_container Antropometri_container">
+                <div class="Antropometri_content">
+                    <h2 class="section_header">Antropometri</h2>
+                    <p class="section_subheader">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga veritatis odio animi ipsam, porro, saepe laboriosam earum cupiditate ab quisquam perspiciatis? Molestias, consequuntur ex. Repellendus sapiente soluta illo nobis minima!
+                    </p>
+                    <button class="btn">
+                    Read More <i class="ri-arrow-right-line"></i>
+                    </button>
+                </div>
+                <div class="Antropometri_image">
+                    <img src="./img/gambar2.png" alt="Antropometri">
+                </div>
+            </div>
+        </section>
+    <!-- ini akhir Antropometri -->
+
+
+    <!-- ini halaman gizi -->
+        <section class="gizi" id="gizi">
+            <div class="section_container discover_container">
+                <h2 class="section_header">Gizi yang baik</h2>
                 <p class="section_subheader">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga veritatis odio animi ipsam, porro, saepe laboriosam earum cupiditate ab quisquam perspiciatis? Molestias, consequuntur ex. Repellendus sapiente soluta illo nobis minima!
+                    Temukan Gizi yang baik untuk sikecil
                 </p>
+                <div class="gizi_grid">
+                    <div class="gizi_card">
+
+                        <div class="gizi_image">
+                            <img src="./img/gizi-image/gizi-image-1.jpg" alt="">
+                        </div>
+                        <div class="gizi_card_content">
+                            <h4>Makanan Gizi</h4>
+                        </div>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta architecto iste rerum commodi laudantium assumenda eius. Explicabo deserunt aspernatur
+                        </p>
+                        <button class="gizi_btn">
+                            discover more <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </div>
+
+                    <div class="gizi_card">
+                        <div class="gizi_image">
+                            <img src="./img/gizi-image/gizi-image-2.jpg" alt="">
+                        </div>
+                        <div class="gizi_card_content">
+                            <h4>Makanan Gizi</h4>
+                        </div>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta architecto iste rerum commodi laudantium assumenda eius. Explicabo deserunt aspernatur
+                        </p>
+                        <button class="gizi_btn">
+                            discover more <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </div>
+
+                    <div class="gizi_card">
+                        <div class="gizi_image">
+                            <img src="./img/gizi-image/gizi-image-3.jpg" alt="">
+                        </div>
+                        <div class="gizi_card_content">
+                            <h4>Makanan Gizi</h4>
+                        </div>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta architecto iste rerum commodi laudantium assumenda eius. Explicabo deserunt aspernatur
+                        </p>
+                        <button class="gizi_btn">
+                            discover more <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+    <!-- ini akhir halaman gizi -->
+
+
+    <!-- ini halaman blog -->
+    <section class="blogs" id="blog">
+        <div class="blogs_container">
+            <h2 class="section_header">Latest on the blogs</h2>
+            <p class="section_subheader">We want lorem ipsum dbeu</p>
+            <div class="blogs_grid">
+                <div class="blogs_card">
+                    <img src="img/blog-image/blog-image-1.jpg" alt="blog"/>
+                    <div class="blogs_content">
+                        Pentingnya makanan sehat sejak usia dini
+                    </div>
+                </div>
+                <div class="blogs_card">
+                    <img src="img/blog-image/blog-image-2.jpg" alt="blog"/>
+                    <div class="blogs_content">
+                        Pentingnya makanan sehat sejak usia dini
+                    </div>
+                </div>
+                <div class="blogs_card">
+                    <img src="img/blog-image/blog-image-3.jpg" alt="blog"/>
+                    <div class="blogs_content">
+                        Pentingnya makanan sehat sejak usia dini
+                    </div>
+                </div>
+                <div class="blogs_card">
+                    <img src="img/blog-image/blog-image-4.jpg" alt="blog"/>
+                    <div class="blogs_content">
+                        Pentingnya makanan sehat sejak usia dini
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ini akhir halaman blog -->
+
+
+    <!-- ini halaman news -->
+    <section class="news" id="news">
+        <div class="section_container news_container">
+            <h2 class="section_header">News</h2>
+            <p class="section_subheader">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, quaerat ipsum? Possimus fugit aliquid quas ea sequi
+            </p>
+            <div class="news_grid">
+                <div class="news_card">
+                    <img src="img/news-image/news-image-1.jpg" alt="news"/>
+                    <div class="news_content">
+                        <h3 >judul berita</h3>
+                        <h4>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet ut magni amet, iusto ipsum nobis aspernatur odio adipisci porro voluptate perferendis officiis corrupti expedita nam eos asperiores hic accusantium illo.</h4>
+                        <div class="news_footer">
+                            <p>18 apr 2022</p>
+                            <span>
+                                <a href="#"><i class="ri-share-line"></i></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="news_card">
+                    <img src="img/news-image/news-image-2.jpg" alt="news"/>
+                    <div class="news_content">
+                        <h3 >judul berita</h3>
+                        <h4>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam doloribus quo modi corporis eius tempora beatae suscipit dolorem, facere aut dolorum recusandae in expedita eaque eos eveniet. Deserunt, voluptates minima!</h4>
+                        <div class="news_footer">
+                            <p>18 apr 2022</p>
+                            <span>
+                                <a href="#"><i class="ri-share-line"></i></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="news_card">
+                    <img src="img/news-image/news-image-3.jpg" alt="news"/>
+                    <div class="news_content">
+                        <h3 >judul berita</h3>
+                        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure voluptatem, corrupti facere excepturi labore dolores. Maiores odit quasi dolorem repudiandae harum, ipsa impedit laborum dolor magni, temporibus omnis soluta quas.</h4>
+                        <div class="news_footer">
+                            <p>18 apr 2022</p>
+                            <span>
+                                <a href="#"><i class="ri-share-line"></i></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="news_card">
+                    <img src="img/news-image/news-image-4.jpg" alt="news"/>
+                    <div class="news_content">
+                        <h3 >judul berita</h3>
+                        <h4>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque nostrum modi laboriosam non, necessitatibus veritatis minima vel voluptatibus est officia ipsum minus suscipit labore. Laborum suscipit maiores voluptatum facilis perspiciatis.</h4>
+                        <div class="news_footer">
+                            <p>18 apr 2022</p>
+                            <span>
+                                <a href="#"><i class="ri-share-line"></i></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="news_card">
+                    <img src="img/news-image/news-image-5.jpg" alt="news"/>
+                    <div class="news_content">
+                        <h3 >judul berita</h3>
+                        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, accusantium molestias fugit harum officiis est dolor et perferendis, nihil pariatur, deleniti quisquam corrupti rerum ipsam quia ut corporis doloribus? Voluptate!</h4>
+                        <div class="news_footer">
+                            <p>18 apr 2022</p>
+                            <span>
+                                <a href="#"><i class="ri-share-line"></i></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="news_card">
+                    <img src="img/news-image/news-image-6.jpg" alt="news"/>
+                    <div class="news_content">
+                        <h3 >judul berita</h3>
+                        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis a nostrum suscipit numquam iusto animi esse voluptatem sapiente inventore labore dolorum autem qui tempora rem nesciunt, aspernatur aliquid praesentium distinctio.</h4>
+                        <div class="news_footer">
+                            <p>18 apr 2022</p>
+                            <span>
+                                <a href="#"><i class="ri-share-line"></i></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="news_btn">
                 <button class="btn">
-                   Read More <i class="ri-arrow-right-line"></i>
+                    view All <i class="ri-arrow-right-line"></i>
                 </button>
             </div>
-            <div class="Antropometri_image">
-                <img src="./img/gambar2.png" alt="Antropometri">
-            </div>
         </div>
     </section>
-<!-- ini akhir Antropometri -->
+    <!-- ini akhir halaman news -->
 
 
-<!-- ini halaman gizi -->
-    <section class="gizi" id="gizi">
-        <div class="section_container discover_container">
-            <h2 class="section_header">Gizi yang baik</h2>
-            <p class="section_subheader">
-                Temukan Gizi yang baik untuk sikecil
-            </p>
-            <div class="gizi_grid">
-                <div class="gizi_card">
-
-                    <div class="gizi_image">
-                        <img src="./img/gizi-image/gizi-image-1.jpg" alt="">
-                    </div>
-                    <div class="gizi_card_content">
-                        <h4>Makanan Gizi</h4>
-                    </div>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta architecto iste rerum commodi laudantium assumenda eius. Explicabo deserunt aspernatur
-                    </p>
-                    <button class="gizi_btn">
-                        discover more <i class="ri-arrow-right-line"></i>
-                    </button>
-                </div>
-
-                <div class="gizi_card">
-                    <div class="gizi_image">
-                        <img src="./img/gizi-image/gizi-image-2.jpg" alt="">
-                    </div>
-                    <div class="gizi_card_content">
-                        <h4>Makanan Gizi</h4>
-                    </div>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta architecto iste rerum commodi laudantium assumenda eius. Explicabo deserunt aspernatur
-                    </p>
-                    <button class="gizi_btn">
-                        discover more <i class="ri-arrow-right-line"></i>
-                    </button>
-                </div>
-
-                <div class="gizi_card">
-                    <div class="gizi_image">
-                        <img src="./img/gizi-image/gizi-image-3.jpg" alt="">
-                    </div>
-                    <div class="gizi_card_content">
-                        <h4>Makanan Gizi</h4>
-                    </div>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta architecto iste rerum commodi laudantium assumenda eius. Explicabo deserunt aspernatur
-                    </p>
-                    <button class="gizi_btn">
-                        discover more <i class="ri-arrow-right-line"></i>
-                    </button>
-                </div>
-                
+    <!-- ini text logo website -->
+    <section class="hero">
+            <div class="section_container hero_container">
+                <p>Baby Care</p>
             </div>
-        </div>
     </section>
-<!-- ini akhir halaman gizi -->
+    <!-- ini akhir text logo webiste -->
 
 
-<!-- ini halaman blog -->
-   <section class="blogs" id="blog">
-    <div class="blogs_container">
-        <h2 class="section_header">Latest on the blogs</h2>
-        <p class="section_subheader">We want lorem ipsum dbeu</p>
-        <div class="blogs_grid">
-            <div class="blogs_card">
-                <img src="img/blog-image/blog-image-1.jpg" alt="blog"/>
-                <div class="blogs_content">
-                    Pentingnya makanan sehat sejak usia dini
-                </div>
-            </div>
-            <div class="blogs_card">
-                <img src="img/blog-image/blog-image-2.jpg" alt="blog"/>
-                <div class="blogs_content">
-                    Pentingnya makanan sehat sejak usia dini
-                </div>
-            </div>
-            <div class="blogs_card">
-                <img src="img/blog-image/blog-image-3.jpg" alt="blog"/>
-                <div class="blogs_content">
-                    Pentingnya makanan sehat sejak usia dini
-                </div>
-            </div>
-            <div class="blogs_card">
-                <img src="img/blog-image/blog-image-4.jpg" alt="blog"/>
-                <div class="blogs_content">
-                    Pentingnya makanan sehat sejak usia dini
-                </div>
-            </div>
-        </div>
-    </div>
-   </section>
-<!-- ini akhir halaman blog -->
+    <!-- ini halaman gallery -->
+    <section class="gallery" id="gallery">
+            <div class="gallery_container">
+                <h2 class="section_header">Gallery Photos</h2>
+                <p class="section_subheader">
+                    Lorem ipsum dolor, sit amet consectetur
+                </p>
+                <div class="gallery_grid">
+                    <div class="gallery_card">
+                        <img src="img/gallery-image/gallery-image-1.jpg" alt="gallery" />
+                        <div class="gallery_content">
+                            <h4>lorem ipsum you ruh hoiu</h4>
+                            <p>Take By Baby Care</p>
+                        </div>
+                    </div>
 
+                    <div class="gallery_card">
+                        <img src="img/gallery-image/gallery-image-2.jpg" alt="gallery" />
+                        <div class="gallery_content">
+                            <h4>lorem ipsum you ruh hoiu</h4>
+                            <p>Take By Baby Care</p>
+                        </div>
+                    </div>
 
-<!-- ini halaman news -->
-   <section class="news" id="news">
-    <div class="section_container news_container">
-        <h2 class="section_header">News</h2>
-        <p class="section_subheader">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, quaerat ipsum? Possimus fugit aliquid quas ea sequi
-        </p>
-        <div class="news_grid">
-            <div class="news_card">
-                <img src="img/news-image/news-image-1.jpg" alt="news"/>
-                <div class="news_content">
-                    <h3 >judul berita</h3>
-                    <h4>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet ut magni amet, iusto ipsum nobis aspernatur odio adipisci porro voluptate perferendis officiis corrupti expedita nam eos asperiores hic accusantium illo.</h4>
-                    <div class="news_footer">
-                        <p>18 apr 2022</p>
-                        <span>
-                            <a href="#"><i class="ri-share-line"></i></a>
-                        </span>
+                    <div class="gallery_card">
+                        <img src="img/gallery-image/gallery-image-3.jpg" alt="gallery" />
+                        <div class="gallery_content">
+                            <h4>lorem ipsum you ruh hoiu</h4>
+                            <p>Take By Baby Care</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery_card">
+                        <img src="img/gallery-image/gallery-image-4.jpg" alt="gallery" />
+                        <div class="gallery_content">
+                            <h4>lorem ipsum you ruh hoiu</h4>
+                            <p>Take By Baby Care</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery_card">
+                        <img src="img/gallery-image/gallery-image-5.jpg" alt="gallery" />
+                        <div class="gallery_content">
+                            <h4>lorem ipsum you ruh hoiu</h4>
+                            <p>Take By Baby Care</p>
+                        </div>
                     </div>
                 </div>
             </div>
+    </section>
+    <!-- ini akhir halaman gallery -->
 
-            <div class="news_card">
-                <img src="img/news-image/news-image-2.jpg" alt="news"/>
-                <div class="news_content">
-                    <h3 >judul berita</h3>
-                    <h4>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam doloribus quo modi corporis eius tempora beatae suscipit dolorem, facere aut dolorum recusandae in expedita eaque eos eveniet. Deserunt, voluptates minima!</h4>
-                    <div class="news_footer">
-                        <p>18 apr 2022</p>
-                        <span>
-                            <a href="#"><i class="ri-share-line"></i></a>
-                        </span>
+
+    <!-- ini halaman contact -->
+    <section class="contact" id="contact">
+            <div class="section_container contact_container">
+                <div class="contact_col">
+                    <h4>Contact Us for more information</h4>
+                    <p>We always aim replay within 24 hours.</p>
+                </div>
+                <div class="contact_col">
+                    <div class="contact_card">
+                        <span><i class="ri-phone-line"></i></span>
+                        <h4>Call us</h4>
+                        <h5>+62879 987 9878</h5>
+                        <p>we are online now</p>
+                    </div>
+                </div>
+
+                <div class="contact_col">
+                    <div class="contact_card">
+                        <span><i class="ri-mail-line"></i></i></span>
+                        <h4>Email</h4>
+                        <h5 class="emailtxt">babycare@gmail.com</h5>
+                        <p>we are online now</p>
                     </div>
                 </div>
             </div>
-
-            <div class="news_card">
-                <img src="img/news-image/news-image-3.jpg" alt="news"/>
-                <div class="news_content">
-                    <h3 >judul berita</h3>
-                    <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure voluptatem, corrupti facere excepturi labore dolores. Maiores odit quasi dolorem repudiandae harum, ipsa impedit laborum dolor magni, temporibus omnis soluta quas.</h4>
-                    <div class="news_footer">
-                        <p>18 apr 2022</p>
-                        <span>
-                            <a href="#"><i class="ri-share-line"></i></a>
-                        </span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="news_card">
-                <img src="img/news-image/news-image-4.jpg" alt="news"/>
-                <div class="news_content">
-                    <h3 >judul berita</h3>
-                    <h4>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque nostrum modi laboriosam non, necessitatibus veritatis minima vel voluptatibus est officia ipsum minus suscipit labore. Laborum suscipit maiores voluptatum facilis perspiciatis.</h4>
-                    <div class="news_footer">
-                        <p>18 apr 2022</p>
-                        <span>
-                            <a href="#"><i class="ri-share-line"></i></a>
-                        </span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="news_card">
-                <img src="img/news-image/news-image-5.jpg" alt="news"/>
-                <div class="news_content">
-                    <h3 >judul berita</h3>
-                    <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, accusantium molestias fugit harum officiis est dolor et perferendis, nihil pariatur, deleniti quisquam corrupti rerum ipsam quia ut corporis doloribus? Voluptate!</h4>
-                    <div class="news_footer">
-                        <p>18 apr 2022</p>
-                        <span>
-                            <a href="#"><i class="ri-share-line"></i></a>
-                        </span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="news_card">
-                <img src="img/news-image/news-image-6.jpg" alt="news"/>
-                <div class="news_content">
-                    <h3 >judul berita</h3>
-                    <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis a nostrum suscipit numquam iusto animi esse voluptatem sapiente inventore labore dolorum autem qui tempora rem nesciunt, aspernatur aliquid praesentium distinctio.</h4>
-                    <div class="news_footer">
-                        <p>18 apr 2022</p>
-                        <span>
-                            <a href="#"><i class="ri-share-line"></i></a>
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="news_btn">
-            <button class="btn">
-                view All <i class="ri-arrow-right-line"></i>
-            </button>
-        </div>
-    </div>
-   </section>
-<!-- ini akhir halaman news -->
-
-
-<!-- ini text logo website -->
-   <section class="hero">
-        <div class="section_container hero_container">
-            <p>Baby Care</p>
-        </div>
-   </section>
-<!-- ini akhir text logo webiste -->
-
-
-<!-- ini halaman gallery -->
-   <section class="gallery" id="gallery">
-        <div class="gallery_container">
-            <h2 class="section_header">Gallery Photos</h2>
-            <p class="section_subheader">
-                Lorem ipsum dolor, sit amet consectetur
-            </p>
-            <div class="gallery_grid">
-                <div class="gallery_card">
-                    <img src="img/gallery-image/gallery-image-1.jpg" alt="gallery" />
-                    <div class="gallery_content">
-                        <h4>lorem ipsum you ruh hoiu</h4>
-                        <p>Take By Baby Care</p>
-                    </div>
-                </div>
-
-                <div class="gallery_card">
-                    <img src="img/gallery-image/gallery-image-2.jpg" alt="gallery" />
-                    <div class="gallery_content">
-                        <h4>lorem ipsum you ruh hoiu</h4>
-                        <p>Take By Baby Care</p>
-                    </div>
-                </div>
-
-                <div class="gallery_card">
-                    <img src="img/gallery-image/gallery-image-3.jpg" alt="gallery" />
-                    <div class="gallery_content">
-                        <h4>lorem ipsum you ruh hoiu</h4>
-                        <p>Take By Baby Care</p>
-                    </div>
-                </div>
-
-                <div class="gallery_card">
-                    <img src="img/gallery-image/gallery-image-4.jpg" alt="gallery" />
-                    <div class="gallery_content">
-                        <h4>lorem ipsum you ruh hoiu</h4>
-                        <p>Take By Baby Care</p>
-                    </div>
-                </div>
-
-                <div class="gallery_card">
-                    <img src="img/gallery-image/gallery-image-5.jpg" alt="gallery" />
-                    <div class="gallery_content">
-                        <h4>lorem ipsum you ruh hoiu</h4>
-                        <p>Take By Baby Care</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-   </section>
-<!-- ini akhir halaman gallery -->
-
-
-<!-- ini halaman contact -->
-   <section class="contact" id="contact">
-        <div class="section_container contact_container">
-            <div class="contact_col">
-                <h4>Contact Us for more information</h4>
-                <p>We always aim replay within 24 hours.</p>
-            </div>
-            <div class="contact_col">
-                <div class="contact_card">
-                    <span><i class="ri-phone-line"></i></span>
-                    <h4>Call us</h4>
-                    <h5>+62879 987 9878</h5>
-                    <p>we are online now</p>
-                </div>
-            </div>
-
-            <div class="contact_col">
-                <div class="contact_card">
-                    <span><i class="ri-mail-line"></i></i></span>
-                    <h4>Email</h4>
-                    <h5 class="emailtxt">babycare@gmail.com</h5>
-                    <p>we are online now</p>
-                </div>
-            </div>
-        </div>
-   </section>
-<!-- ini akhir halaman contact -->
-</main>
-
-
+    </section>
+    <!-- ini akhir halaman contact -->
+    </main>
 
 <!-- ini halaman footer -->
    <footer class="footer">
@@ -380,7 +376,7 @@
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis, adipisci. Quidem quia facere aperiam alias eligendi aspernatur</p>
             <ul class="footer_nav">
                 <li class="footer_link"><a href="#home">Home</a></li>
-                <li class="footer_link"><a href="#Antropometri">Antropometri</a></li>
+                <li class="footer_link"><a href="#antropometri">Antropometri</a></li>
                 <li class="footer_link"><a href="#gizi">Gizi</a></li>
                 <li class="footer_link"><a href="#blog">Blog</a></li>
                 <li class="footer_link"><a href="#news">News</a></li>
