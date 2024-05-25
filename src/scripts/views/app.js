@@ -4,7 +4,7 @@ class App {
   constructor({
     button,
     drawer,
-    main,
+    body,
     antropometri,
     gizi,
     blog,
@@ -14,7 +14,7 @@ class App {
   }) {
     this._button = button;
     this._drawer = drawer;
-    this._main = main;
+    this._body = body;
     this._antropometri = antropometri;
     this._gizi = gizi;
     this._blog = blog;
@@ -29,7 +29,7 @@ class App {
     DrawerInitiator.init({
       button: this._button,
       drawer: this._drawer,
-      main: this._main,
+      body: this._body,
     });
   }
 }
