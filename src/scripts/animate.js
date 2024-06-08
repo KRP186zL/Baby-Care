@@ -58,3 +58,8 @@ ScrollReveal().reveal('.news_card', {
     ...scrollRevealOption,
     interval: 400,
 });
+
+const navbar = document.querySelector('.nav');
+window.addEventListener('scroll', () => {
+    navbar.classList.toggle('nav_scroll', window.scrollY > 0);
+});

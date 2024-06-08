@@ -85,7 +85,7 @@ const deleteGizi = (req, res)=> {
         }else if (!result.affectedRows){
             responseError(res, 404, `Data gizi dengan ID ${id} tidak ditemukan`);
         } else {
-            responseSucces(res, `Data gizi dengan ID ${id} tidak ditemukan`, result);
+            responseSucces(res, `Data gizi dengan ID ${id} berhasil dihapus`, result);
         }
     });
 };

@@ -9,7 +9,7 @@ class App {
     gizi,
     blog,
     news,
-    gallery,
+    about,
     contact,
   }) {
     this._button = button;
@@ -19,7 +19,7 @@ class App {
     this._gizi = gizi;
     this._blog = blog;
     this._news = news;
-    this._gallery = gallery;
+    this._about = about;
     this._contact = contact;
 
     this._initialAppShell();
