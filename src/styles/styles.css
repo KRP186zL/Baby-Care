@@ -32,18 +32,33 @@
 
 .section_subheader {
   max-width: 600px;
-  margin: auto;
+  margin: 1rem auto;
   text-align: center;
 }
 
-.btn {
+.btn,
+.gizi_btn {
   padding: 0.75rem 1.5rem;
   outline: none;
   border: none;
   font-size: 1rem;
-  color: var(--primary-color);
   background-color: var(--secondary-color);
   cursor: pointer;
+  color: var(--white);
+  display: inline-block;
+  margin-top: 20px;
+  transition: 0.3s;
+  border-radius: 10px;
+}
+
+.btn:hover,
+.btn:hover a,
+.gizi_btn:hover {
+  background-color: var(--white);
+  color: var(--secondary-color);
+}
+
+.btn a {
   color: var(--white);
 }
 
@@ -91,6 +106,10 @@ body {
   z-index: 9999;
 }
 
+.nav_scroll {
+  backdrop-filter: blur(10px);
+}
+
 .nav_bar {
   max-width: var(--max-widht);
   display: flex;
@@ -127,6 +146,10 @@ body {
 .dropdown-content a:hover {
   color: #f99ddc;
   border-bottom: 2px solid var(--secondary-color);
+}
+
+.dropbtn {
+  cursor: pointer;
 }
 
 .dropdown {
@@ -208,6 +231,9 @@ body {
 /* ini akhir css halaman header */
 
 /* ini css halaman antropometri */
+.Antropometri {
+  display: flex;
+}
 .Antropometri_container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -255,7 +281,93 @@ body {
   max-width: 450px;
   margin: auto;
 }
+
+.antropometri.open {
+  display: none;
+}
+
+.pengukuran-antropometri.open {
+  display: none;
+}
+.pengukuran-antropometri {
+  display: flex;
+}
+
+.btn-ukur {
+  display: flex;
+  justify-content: space-around;
+}
+
+.pengukuran-antropometri li {
+  margin-left: 1rem;
+}
 /* ini akhir css halaman antropometri */
+
+/* ini css halaman stunting calculate */
+/* General styles */
+.stunting-calculate {
+  background-image: linear-gradient(
+    to bottom,
+    var(--primary-color),
+    rgba(255, 255, 255, 0.5)
+  );
+}
+
+.stunting_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group {
+  width: 100%;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+label {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #333;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  border: 3px solid var(--secondary-color);
+  outline: none;
+}
+
+.btn_hitung {
+  margin-block-start: 1rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.btn_hitung:hover {
+  background-color: var(--secondary-color);
+}
+
+/* ini akhir css halaman stunting calculate */
 
 /* ini css halaman gizi */
 .gizi {
@@ -269,21 +381,29 @@ body {
 .gizi_grid {
   margin-top: 4rem;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 4rem;
 }
 
 .gizi_card {
   max-width: 320px;
   margin: auto;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-.gizi_card:nth-child(2) {
-  transform: translateY(5rem);
+.gizi_card:nth-child(even) {
+  margin-top: 5rem;
 }
 
 .gizi_image {
   position: relative;
+}
+
+.gizi_image img {
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .gizi_image::after {
@@ -307,13 +427,10 @@ body {
   font-weight: 800;
   font-family: var(--header-font);
   color: var(--secondary-color);
+  text-align: center;
 }
 
-.gizi_card_content p {
-  margin-bottom: 2rem;
-}
-
-.gizi_btn {
+/* .gizi_btn {
   padding: 0.75rem 1rem;
   outline: none;
   font-size: 1rem;
@@ -321,12 +438,13 @@ body {
   background-color: transparent;
   border: 1px solid var(--white);
   cursor: pointer;
+  border-radius: 10px;
 }
 .gizi_btn:hover {
-  background-color: var(--white);
-  color: var(--primary-color);
+  color: var(--white);
+  background-color: var(--secondary-color);
   transition: 0.3s;
-}
+} */
 /* ini akhir css halaman gizi */
 
 /* ini css halaman blogs */
@@ -377,7 +495,11 @@ body {
 }
 
 .news_card {
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: #f355c1; /* Menambahkan warna background pada kartu */
+  border-radius: 8px; /* Opsional: menambahkan border radius untuk mempercantik kartu */
+  overflow: hidden; /* Untuk mengatasi overflow konten */
 }
 
 .news_card img {
@@ -388,7 +510,7 @@ body {
 
 .news_content {
   padding: 2rem;
-  background-color: #f355c1;
+  flex-grow: 1; /* Membuat konten tumbuh untuk mengisi ruang yang tersedia */
 }
 
 .news_author {
@@ -419,6 +541,7 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
+  margin-top: auto; /* Memastikan footer berada di bagian bawah kartu */
 }
 
 .news_footer p {
@@ -432,7 +555,8 @@ body {
   opacity: 0.75;
 }
 
-.news_btn {
+.news_btn,
+.gizi_btn_selengkapnya {
   margin-top: 4rem;
   text-align: center;
 }
@@ -451,33 +575,35 @@ body {
 }
 /* ini akhir css halaman logo website */
 
-/* ini css halaman gallery */
-.gallery_container {
+/* ini css halaman about */
+.about_container {
   padding: 5rem 1rem;
 }
 
-.gallery_grid {
+.about_grid {
   margin-top: 4rem;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  margin: auto;
   gap: 1rem;
 }
 
-.gallery_card {
+.about_card {
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 }
 
-.gallery_card img {
+.about_card img {
   width: 100%;
-  height: 100%;
+  height: 400px;
   object-fit: cover;
 }
 
-.gallery_content {
+.about_content {
   position: absolute;
   left: 50%;
-  bottom: -8rem;
+  bottom: -2000px;
   transform: translateX(-50%);
   width: 100%;
   padding: 2rem 1rem;
@@ -486,21 +612,21 @@ body {
   background-image: linear-gradient(to top, var(--primary-color), transparent);
 }
 
-.gallery_content h4 {
+.about_content h4 {
   margin-bottom: 1rem;
   font-size: 2rem;
   font-weight: 800;
   font-family: var(--header-font);
 }
 
-.gallery_card:hover .gallery_content {
+.about_card:hover .about_content {
   bottom: 0;
 }
 
-/* ini akhir css halaman gallery */
+/* ini akhir css halaman about */
 
 /* ini css halaman contact */
-.contact {
+/* .contact {
   background-image: linear-gradient(
     to top,
     rgba(255, 255, 255, 0.05),
@@ -553,7 +679,7 @@ body {
 
 .contact_card .emailtxt {
   font-size: 15px;
-}
+} */
 /* ini akhri css halaman contact */
 
 /* ini css halaman footer */
@@ -663,12 +789,13 @@ body {
   }
 
   .Antropometri_container {
+    display: grid;
     grid-template-columns: repeat(1, 1fr);
-    text-align: center;
+    text-align: left;
   }
 
   .Antropometri_container :is(.section_header, .section_subheader) {
-    text-align: center;
+    text-align: justify;
   }
 
   .Antropometri_image {
@@ -692,7 +819,7 @@ body {
     font-size: 10rem;
   }
 
-  .gallery_grid {
+  .about_grid {
     grid-template-columns: repeat(3, 1fr);
   }
 
@@ -724,6 +851,14 @@ body {
     grid-template-columns: repeat(1, 1fr);
   }
 
+  .gizi_card {
+    max-width: 100%;
+  }
+
+  .gizi_card_content h4 {
+    text-align: center;
+  }
+
   .gizi_card:nth-child(2) {
     transform: translateY(0);
   }
@@ -737,18 +872,18 @@ body {
   }
 
   .hero_container p {
-    font-size: 6rem;
+    font-size: 4rem;
   }
 
-  .gallery_grid {
-    grid-template-columns: repeat(2, 1fr);
+  .about_grid {
+    grid-template-columns: repeat(1, 1fr);
   }
 
-  .contact_container {
+  /* .contact_container {
     grid-template-columns: repeat(1, 1fr);
   }
 
   .contact_col:first-child {
     grid-area: unset;
-  }
+  } */
 }

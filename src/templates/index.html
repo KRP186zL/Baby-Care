@@ -12,24 +12,22 @@
 </head>
 <body>
     <!-- awal header -->
-    <header id="Home" class="header">
+    <header id="home" class="header">
         <nav class="nav">
             <div class="nav_logo"><a href="#">Baby Care.</a></div>
             <div class="nav_bar" >
                 <ul class="nav_links" id="navigationDrawer">
                     <li class="link"><a href="#home">Home</a></li>
                     <li class="link dropdown">
-                        <a href="#" class="dropbtn">Stunting<i class="ri-arrow-down-s-line"></i></a>
+                        <a class="dropbtn">Stunting<i class="ri-arrow-down-s-line"></i></a>
                         <ul class="dropdown-content">
                             <li><a href="#antropometri">Antropometri</a></li>
                             <li><a href="#stuntingCalculate">Stunting Calculate</a></li>
                         </ul>
                     </li>
                     <li class="link"><a href="#gizi">Gizi</a></li>
-                    <li class="link"><a href="#blog">Blog</a></li>
                     <li class="link"><a href="#news">News</a></li>
-                    <li class="link"><a href="#gallery">Gallery</a></li>
-                    <li class="link"><a href="#contact">Contact</a></li>
+                    <li class="link"><a href="#about">About Us</a></li>
                 </ul>
             </div>            
             <div class="hamburger"><button id="hamburgerButton"><i class="ri-menu-fill" style="font-size: 1.5rem; color: white;"></i></button></div>
@@ -38,9 +36,7 @@
         <div class="section_container header_container">
             <h1>BABY CARE</h1>
             <h4>Panduan untuk sang bunda</h4>
-            <button class="btn">
-            Read more<i class="ri-arrow-right-line"></i>
-            </button>
+            <a class="btn" href="#antropometri">Scroll Down<i class="ri-arrow-down-line"></i></a>
         </div>
     </header>
 <!-- akhir header -->
@@ -48,14 +44,54 @@
     <main class="main" id="main">
         <!-- ini halaman Antropometri -->
         <section class="Antropometri" id="antropometri">
-            <div class="section_container Antropometri_container">
+            <div class="section_container Antropometri_container pengukuran-antropometri open">
+                <div class="Antropometri_content">
+                    <h2 class="section_header">Cara Mengukur</h2>
+                    <p class="section_subheader">
+                        <ol>
+                            <li>Persiapan Alat:
+                                <ul>
+                                    <li>Pastikan timbangan berada di permukaan yang datar dan stabil.</li>
+                                    <li>Pastikan ukuran timbangan dimulai dari 0</li>
+                                </ul>
+                            </li>
+                            <li>
+                                Posisi Anak:
+                                <ul>
+                                    <li>Untuk anak di bawah 2 tahun, timbang anak dalam posisi telentang di atas timbangan bayi.</li>
+                                    <li>Untuk 2 tahun ke atas, pastikan anak berdiri tegak di tengah timbangan dengan pakaian seminimal mungkin untuk akurasi maksimal.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                Pengukuran:
+                                <ul>
+                                    <li>Bacalah berat badan anak yang ditampilkan pada timbangan.</li>
+                                    <li>Catat hasil pengukuran dengan akurat.</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </p>
+                    <div class="btn-ukur">
+                        <button id="buttonAntropometri" type="button" class="btn">
+                            Antropometri <i class="ri-arrow-left-line"></i>
+                        </button>
+                        <a class="btn" href="#stuntingCalculate">
+                            Hitung Stunting <i class="ri-arrow-down-line"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="Antropometri_image">
+                    <img src="./img/gambar3.png" alt="Antropometri">
+                </div>
+            </div>
+            <div class="section_container Antropometri_container antropometri">
                 <div class="Antropometri_content">
                     <h2 class="section_header">Antropometri</h2>
                     <p class="section_subheader">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga veritatis odio animi ipsam, porro, saepe laboriosam earum cupiditate ab quisquam perspiciatis? Molestias, consequuntur ex. Repellendus sapiente soluta illo nobis minima!
+                        Antropometri adalah suatu cabang ilmu yang mempelajari tentang dimensi tubuh manusia. Antropometri berasal dari 'antro' yang berarti manusia dan 'metri' yang mempunyai arti pengukuran. Oleh sebab itu, ilmu antropometri digunakan sebagai bidang yang akan membahas perihal pengukuran manusia secara fisik.
                     </p>
-                    <button class="btn">
-                    Read More <i class="ri-arrow-right-line"></i>
+                    <button id="panduanPengukuran" type="button" class="btn">
+                    Panduan Pengukuran <i class="ri-arrow-right-line"></i>
                     </button>
                 </div>
                 <div class="Antropometri_image">
@@ -64,6 +100,37 @@
             </div>
         </section>
     <!-- ini akhir Antropometri -->
+
+    <!-- ini halaman Stunting Calculate -->
+        <section class="stunting-calculate" id="stuntingCalculate">
+            <form class="form-stunting" id="stuntingTinggi">
+                <div class="section_container stunting_container">
+                    <h2 class="section_header">Stunting Calculate</h2>
+                    <p class="section_subheader">
+                        Hitung Stunting si kecil
+                    </p>
+                    <div class="stunting_form">
+                        <div class="form-group">
+                            <label for="nama">Nama</label>
+                            <input type="text" id="nama" name="nama" placeholder="Nama">
+                        </div>
+                        <div class="form-group
+                        ">
+                            <label for="umur">Usia</label>
+                            <input type="number" min="0" max="60" id="umur" name="umur" placeholder="Bulan">
+                        </div>
+                        <div class="form-group
+                        ">
+                            <label for="berat">Berat</label>
+                            <input type="number" id="berat" name="berat" placeholder="KG">
+                        </div>
+                    </div>
+                    <button type="button" class="btn_hitung">Hitung</button>
+                </div>
+            </form>
+            <div class="hasil"></div>
+        </section>
+    <!-- ini akhir Stunting Calculate -->
 
 
     <!-- ini halaman gizi -->
@@ -80,13 +147,13 @@
                             <img src="./img/gizi-image/gizi-image-1.jpg" alt="">
                         </div>
                         <div class="gizi_card_content">
-                            <h4>Makanan Gizi</h4>
+                            <h4>Makanan</h4>
                         </div>
                         <p>
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta architecto iste rerum commodi laudantium assumenda eius. Explicabo deserunt aspernatur
                         </p>
                         <button class="gizi_btn">
-                            discover more <i class="ri-arrow-right-line"></i>
+                            Info Gizi <i class="ri-arrow-right-line"></i>
                         </button>
                     </div>
 
@@ -95,13 +162,13 @@
                             <img src="./img/gizi-image/gizi-image-2.jpg" alt="">
                         </div>
                         <div class="gizi_card_content">
-                            <h4>Makanan Gizi</h4>
+                            <h4>Makanan</h4>
                         </div>
                         <p>
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta architecto iste rerum commodi laudantium assumenda eius. Explicabo deserunt aspernatur
                         </p>
                         <button class="gizi_btn">
-                            discover more <i class="ri-arrow-right-line"></i>
+                            Info Gizi <i class="ri-arrow-right-line"></i>
                         </button>
                     </div>
 
@@ -110,64 +177,46 @@
                             <img src="./img/gizi-image/gizi-image-3.jpg" alt="">
                         </div>
                         <div class="gizi_card_content">
-                            <h4>Makanan Gizi</h4>
+                            <h4>Makanan</h4>
                         </div>
                         <p>
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta architecto iste rerum commodi laudantium assumenda eius. Explicabo deserunt aspernatur
                         </p>
                         <button class="gizi_btn">
-                            discover more <i class="ri-arrow-right-line"></i>
+                            Info Gizi <i class="ri-arrow-right-line"></i>
                         </button>
                     </div>
-                    
+                    <div class="gizi_card">
+                        <div class="gizi_image">
+                            <img src="./img/gizi-image/gizi-image-2.jpg" alt="">
+                        </div>
+                        <div class="gizi_card_content">
+                            <h4>Makanan</h4>
+                        </div>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta architecto iste rerum commodi laudantium assumenda eius. Explicabo deserunt aspernatur
+                        </p>
+                        <button class="gizi_btn">
+                            Info Gizi <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="gizi_btn_selengkapnya">
+                    <button class="btn">
+                        Gizi Lainnya <i class="ri-arrow-right-line"></i>
+                    </button>
                 </div>
             </div>
         </section>
     <!-- ini akhir halaman gizi -->
-
-
-    <!-- ini halaman blog -->
-    <section class="blogs" id="blog">
-        <div class="blogs_container">
-            <h2 class="section_header">Latest on the blogs</h2>
-            <p class="section_subheader">We want lorem ipsum dbeu</p>
-            <div class="blogs_grid">
-                <div class="blogs_card">
-                    <img src="img/blog-image/blog-image-1.jpg" alt="blog"/>
-                    <div class="blogs_content">
-                        Pentingnya makanan sehat sejak usia dini
-                    </div>
-                </div>
-                <div class="blogs_card">
-                    <img src="img/blog-image/blog-image-2.jpg" alt="blog"/>
-                    <div class="blogs_content">
-                        Pentingnya makanan sehat sejak usia dini
-                    </div>
-                </div>
-                <div class="blogs_card">
-                    <img src="img/blog-image/blog-image-3.jpg" alt="blog"/>
-                    <div class="blogs_content">
-                        Pentingnya makanan sehat sejak usia dini
-                    </div>
-                </div>
-                <div class="blogs_card">
-                    <img src="img/blog-image/blog-image-4.jpg" alt="blog"/>
-                    <div class="blogs_content">
-                        Pentingnya makanan sehat sejak usia dini
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ini akhir halaman blog -->
-
 
     <!-- ini halaman news -->
     <section class="news" id="news">
         <div class="section_container news_container">
             <h2 class="section_header">News</h2>
             <p class="section_subheader">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, quaerat ipsum? Possimus fugit aliquid quas ea sequi
+                Berita terbaru seputar kesehatan anak
             </p>
             <div class="news_grid">
                 <div class="news_card">
@@ -256,7 +305,7 @@
             </div>
             <div class="news_btn">
                 <button class="btn">
-                    view All <i class="ri-arrow-right-line"></i>
+                 Berita Lainnya <i class="ri-arrow-right-line"></i>
                 </button>
             </div>
         </div>
@@ -273,86 +322,43 @@
     <!-- ini akhir text logo webiste -->
 
 
-    <!-- ini halaman gallery -->
-    <section class="gallery" id="gallery">
-            <div class="gallery_container">
-                <h2 class="section_header">Gallery Photos</h2>
+    <!-- ini halaman about us -->
+    <section class="about" id="about">
+            <div class="about_container">
+                <h2 class="section_header">Developer Team</h2>
                 <p class="section_subheader">
-                    Lorem ipsum dolor, sit amet consectetur
+                    Tim developer yang membuat website ini
                 </p>
-                <div class="gallery_grid">
-                    <div class="gallery_card">
-                        <img src="img/gallery-image/gallery-image-1.jpg" alt="gallery" />
-                        <div class="gallery_content">
-                            <h4>lorem ipsum you ruh hoiu</h4>
+                <div class="about_grid">
+                    <div class="about_card">
+                        <img src="img/gallery-image/gallery-image-1.jpg" alt="about" />
+                        <div class="about_content">
+                            <h4>Krisna Rizki Pratma</h4>
                             <p>Take By Baby Care</p>
                         </div>
                     </div>
 
-                    <div class="gallery_card">
-                        <img src="img/gallery-image/gallery-image-2.jpg" alt="gallery" />
-                        <div class="gallery_content">
-                            <h4>lorem ipsum you ruh hoiu</h4>
+                    <div class="about_card">
+                        <img src="img/gallery-image/gallery-image-2.jpg" alt="about" />
+                        <div class="about_content">
+                            <h4>Afif Rahman</h4>
                             <p>Take By Baby Care</p>
                         </div>
                     </div>
 
-                    <div class="gallery_card">
-                        <img src="img/gallery-image/gallery-image-3.jpg" alt="gallery" />
-                        <div class="gallery_content">
-                            <h4>lorem ipsum you ruh hoiu</h4>
-                            <p>Take By Baby Care</p>
-                        </div>
-                    </div>
-
-                    <div class="gallery_card">
-                        <img src="img/gallery-image/gallery-image-4.jpg" alt="gallery" />
-                        <div class="gallery_content">
-                            <h4>lorem ipsum you ruh hoiu</h4>
-                            <p>Take By Baby Care</p>
-                        </div>
-                    </div>
-
-                    <div class="gallery_card">
-                        <img src="img/gallery-image/gallery-image-5.jpg" alt="gallery" />
-                        <div class="gallery_content">
-                            <h4>lorem ipsum you ruh hoiu</h4>
+                    <div class="about_card">
+                        <img src="img/gallery-image/gallery-image-3.jpg" alt="about" />
+                        <div class="about_content">
+                            <h4>Rhexy Pasha Dwi Olivia</h4>
                             <p>Take By Baby Care</p>
                         </div>
                     </div>
                 </div>
             </div>
     </section>
-    <!-- ini akhir halaman gallery -->
+    <!-- ini akhir halaman about us -->
 
 
-    <!-- ini halaman contact -->
-    <section class="contact" id="contact">
-            <div class="section_container contact_container">
-                <div class="contact_col">
-                    <h4>Contact Us for more information</h4>
-                    <p>We always aim replay within 24 hours.</p>
-                </div>
-                <div class="contact_col">
-                    <div class="contact_card">
-                        <span><i class="ri-phone-line"></i></span>
-                        <h4>Call us</h4>
-                        <h5>+62879 987 9878</h5>
-                        <p>we are online now</p>
-                    </div>
-                </div>
-
-                <div class="contact_col">
-                    <div class="contact_card">
-                        <span><i class="ri-mail-line"></i></i></span>
-                        <h4>Email</h4>
-                        <h5 class="emailtxt">babycare@gmail.com</h5>
-                        <p>we are online now</p>
-                    </div>
-                </div>
-            </div>
-    </section>
-    <!-- ini akhir halaman contact -->
     </main>
 
 <!-- ini halaman footer -->
@@ -373,19 +379,18 @@
                     <a href="#"><i class="ri-twitter-x-line"></i></a>
                 </span>
             </div>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis, adipisci. Quidem quia facere aperiam alias eligendi aspernatur</p>
+            <p>Pilihan terbaik untuk sang bunda</p>
             <ul class="footer_nav">
                 <li class="footer_link"><a href="#home">Home</a></li>
                 <li class="footer_link"><a href="#antropometri">Antropometri</a></li>
+                <li class="footer_link"><a href="#stuntingCalculate">Stunting Calculate</a></li>
                 <li class="footer_link"><a href="#gizi">Gizi</a></li>
-                <li class="footer_link"><a href="#blog">Blog</a></li>
                 <li class="footer_link"><a href="#news">News</a></li>
-                <li class="footer_link"><a href="#gallery">Gallery</a></li>
-                <li class="footer_link"><a href="#contact">Contact</a></li>
+                <li class="footer_link"><a href="#about">About Us</a></li>
             </ul>
         </div>
         <div class="footer_bar">
-            <p>&copy; 2024 Nama Anda. All rights reserved.</p>
+            <p>&copy; 2024 Baby Care. All rights reserved.</p>
         </div>
    </footer>
 <!-- ini akhir halaman footer -->
