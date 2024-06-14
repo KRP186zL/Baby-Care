@@ -45,7 +45,6 @@ const createGizi = (req, res) => {
         Description: req.body.Description,
         Nutrient: req.body.Nutrient,
         Benefit: req.body.Benefit,
-        Source: req.body.Source
     };
     Gizi.create(newGizi, (err, result)=> {
         if(err) {
@@ -64,7 +63,6 @@ const updateGizi = (req, res)=> {
         Description: req.body.Description,
         Nutrient: req.body.Nutrient,
         Benefit: req.body.Benefit,
-        Source: req.body.Source
     };
     Gizi.update(id, updateGizi, (err, result) => {
         if(err) {

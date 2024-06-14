@@ -44,15 +44,55 @@
     <main class="main" id="main">
         <!-- ini halaman Antropometri -->
         <section class="Antropometri" id="antropometri">
-            <div class="section_container Antropometri_container">
+            <div class="section_container Antropometri_container pengukuran-antropometri open">
+                <div class="Antropometri_content">
+                    <h2 class="section_header">Cara Mengukur</h2>
+                    <p class="section_subheader">
+                        <ol>
+                            <li>Persiapan Alat:
+                                <ul>
+                                    <li>Pastikan timbangan berada di permukaan yang datar dan stabil.</li>
+                                    <li>Pastikan ukuran timbangan dimulai dari 0</li>
+                                </ul>
+                            </li>
+                            <li>
+                                Posisi Anak:
+                                <ul>
+                                    <li>Untuk anak di bawah 2 tahun, timbang anak dalam posisi telentang di atas timbangan bayi.</li>
+                                    <li>Untuk 2 tahun ke atas, pastikan anak berdiri tegak di tengah timbangan dengan pakaian seminimal mungkin untuk akurasi maksimal.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                Pengukuran:
+                                <ul>
+                                    <li>Bacalah berat badan anak yang ditampilkan pada timbangan.</li>
+                                    <li>Catat hasil pengukuran dengan akurat.</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </p>
+                    <div class="btn-ukur">
+                        <button id="buttonAntropometri" type="button" class="btn">
+                            Antropometri <i class="ri-arrow-left-line"></i>
+                        </button>
+                        <a class="btn" href="#stuntingCalculate">
+                            Hitung Stunting <i class="ri-arrow-down-line"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="Antropometri_image">
+                    <img src="./img/gambar3.png" alt="Antropometri">
+                </div>
+            </div>
+            <div class="section_container Antropometri_container antropometri">
                 <div class="Antropometri_content">
                     <h2 class="section_header">Antropometri</h2>
                     <p class="section_subheader">
                         Antropometri adalah suatu cabang ilmu yang mempelajari tentang dimensi tubuh manusia. Antropometri berasal dari 'antro' yang berarti manusia dan 'metri' yang mempunyai arti pengukuran. Oleh sebab itu, ilmu antropometri digunakan sebagai bidang yang akan membahas perihal pengukuran manusia secara fisik.
                     </p>
-                    <a class="btn" href="#panduanPengukuran">
+                    <button id="panduanPengukuran" type="button" class="btn">
                     Panduan Pengukuran <i class="ri-arrow-right-line"></i>
-                    </a>
+                    </button>
                 </div>
                 <div class="Antropometri_image">
                     <img src="./img/gambar2.png" alt="Antropometri">
@@ -60,6 +100,37 @@
             </div>
         </section>
     <!-- ini akhir Antropometri -->
+
+    <!-- ini halaman Stunting Calculate -->
+        <section class="stunting-calculate" id="stuntingCalculate">
+            <form class="form-stunting" id="stuntingTinggi">
+                <div class="section_container stunting_container">
+                    <h2 class="section_header">Stunting Calculate</h2>
+                    <p class="section_subheader">
+                        Hitung Stunting si kecil
+                    </p>
+                    <div class="stunting_form">
+                        <div class="form-group">
+                            <label for="nama">Nama</label>
+                            <input type="text" id="nama" name="nama" placeholder="Nama">
+                        </div>
+                        <div class="form-group
+                        ">
+                            <label for="umur">Usia</label>
+                            <input type="number" min="0" max="60" id="umur" name="umur" placeholder="Bulan">
+                        </div>
+                        <div class="form-group
+                        ">
+                            <label for="berat">Berat</label>
+                            <input type="number" id="berat" name="berat" placeholder="KG">
+                        </div>
+                    </div>
+                    <button type="button" class="btn_hitung">Hitung</button>
+                </div>
+            </form>
+            <div class="hasil"></div>
+        </section>
+    <!-- ini akhir Stunting Calculate -->
 
 
     <!-- ini halaman gizi -->
