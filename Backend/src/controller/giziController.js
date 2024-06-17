@@ -1,65 +1,61 @@
-const Gizi = require("../models/giziModels");
+const Gizi = require('../models/giziModels');
 
-const responseSucces = (res, message, data) => {
+const responseSucces = (res, message, data)=> {
   res.status(200).json({
-    status: "success",
+    status: 'success',
     message: message,
-    data: data,
+    data: data
   });
 };
 
-const responseError = (res, statusCode, message) => {
+const responseError = (res, statusCode, message)=> {
   res.status(statusCode).json({
-    status: "error",
-    message: message,
+    status: 'error',
+    message: message
   });
 };
 
 const getAllGizi = (req, res) => {
-  Gizi.getAll((err, results) => {
-    if (err) {
+  Gizi.getAll((err, results)=> {
+    if(err) {
       responseError(res, 500, err.message);
     } else {
-      responseSucces(res, "Data gizi Di Temukan!", results);
+      responseSucces(res, 'Data gizi ditemukan', results);
     }
   });
 };
 
-const getGiziById = (req, res) => {
+const getGiziById = (req, res)=> {
   const id = req.params.id;
-  Gizi.getById(id, (err, result) => {
-    if (err) {
+  Gizi.getById(id, (err, results)=> {
+    if (err){
       responseError(res, 500, err.message);
-    } else if (!result) {
-      responseError(res, 404, "Data gizi tidak ditemukan!");
+    }else if (!results) {
+      responseError(res, 404, 'Data Gizi tidak ditemukan!!');
     } else {
-      responseSucces(
-        res,
-        `Data gizi dengan ID ${id} berhasil ditemukan`,
-        result
-      );
+      responseSucces(res, `Data gizi dengan ID ${id} berhasil ditemukan`, results);
     }
   });
 };
 
-const createGizi = (req, res) => {
+const createGizi = (req, res)=> {
   const newGizi = {
     ImageUrl: req.file ? `/uploads/${req.file.filename}` : null,
     Title: req.body.Title,
     Description: req.body.Description,
     Nutrient: req.body.Nutrient,
-    Benefit: req.body.Benefit,
+    Benefit: req.body.Benefit
   };
-  Gizi.create(newGizi, (err, _result) => {
-    if (err) {
+  Gizi.create(newGizi, (err, results)=> {
+    if(err){
       responseError(res, 500, err.message);
-    } else {
-      responseSucces(res, "Data Gizi berhasil ditambahkan", newGizi);
+    }else {
+      responseSucces(res, 'Data gizi berhasil ditambahkan', results);
     }
   });
 };
 
-const updateGizi = (req, res) => {
+const updateGizi = (req, res)=> {
   const id = req.params.id;
   const updateGizi = {
     ImageUrl: req.file ? `/uploads/${req.file.filename}` : null,
@@ -68,30 +64,22 @@ const updateGizi = (req, res) => {
     Nutrient: req.body.Nutrient,
     Benefit: req.body.Benefit,
   };
-  Gizi.update(id, updateGizi, (err, result) => {
-    if (err) {
+  Gizi.update(id, updateGizi, (err, results)=> {
+    if(err) {
       responseError(res, 500, err.message);
-    } else if (!result.affectedRows) {
-      responseError(res, 404, `Data gizi dengan ID ${id} tidak ditemukan`);
-    } else {
-      responseSucces(
-        res,
-        `Data gizi dengan ID ${id} berhasil diperbarui`,
-        updateGizi
-      );
+    } else{
+      responseSucces(res, `Data gizi dengan ID ${id} berhasil diperbarui`, results);
     }
   });
 };
 
-const deleteGizi = (req, res) => {
+const deleteGizi = (req, res)=> {
   const id = req.params.id;
-  Gizi.delete(id, (err, result) => {
-    if (err) {
-      responseError(res, 500, err.message);
-    } else if (!result.affectedRows) {
-      responseError(res, 404, `Data gizi dengan ID ${id} tidak ditemukan`);
-    } else {
-      responseSucces(res, `Data gizi dengan ID ${id} berhasil dihapus`, result);
+  Gizi.delete(id, (err, results)=> {
+    if(err){
+      responseError(err, 500, err.message);
+    }else {
+      responseSucces(res, 'Data gizi dengan ID ${id} berhasil dihapus',results);
     }
   });
 };
@@ -101,5 +89,5 @@ module.exports = {
   getGiziById,
   createGizi,
   updateGizi,
-  deleteGizi,
+  deleteGizi
 };
