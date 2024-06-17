@@ -348,6 +348,21 @@ label {
   outline: none;
 }
 
+.form-group.radio {
+  flex-direction: row;
+  align-items: center;
+}
+
+.form-group.radio label {
+  margin-right: 10px;
+  margin-bottom: 0;
+}
+
+.form-group.radio input[type="radio"] {
+  width: auto;
+  margin-right: 5px;
+}
+
 .btn_hitung {
   margin-block-start: 1rem;
   padding: 10px 20px;
@@ -509,6 +524,21 @@ label {
 .news_content {
   padding: 2rem;
   flex-grow: 1; /* Membuat konten tumbuh untuk mengisi ruang yang tersedia */
+  text-align: left;
+}
+
+.news_content a {
+  color: var(--white);
+  font-weight: bold;
+}
+
+.news_content a:hover {
+  color: var(--primary-color);
+}
+
+.news_content h4 {
+  margin-top: 1rem;
+  font-weight: 400 !important;
 }
 
 .news_author {
@@ -542,15 +572,14 @@ label {
   margin-top: auto; /* Memastikan footer berada di bagian bawah kartu */
 }
 
-.news_footer p {
+.news_footer a {
   font-size: 0.9rem;
   opacity: 0.5;
 }
 
-.news_footer span a {
-  font-size: 1.5rem;
-  color: var(--white);
-  opacity: 0.75;
+.news_footer a:hover {
+  opacity: 1;
+  color: white;
 }
 
 .news_btn,
