@@ -1,16 +1,10 @@
 const PengukuranAntropometri = {
   init({
-    antropometriSection,
     buttonPanduan,
     buttonAntropometri,
     antropometri,
     pengukuranAntropometri,
   }) {
-    console.log("button panduan:", buttonPanduan);
-    console.log("button antropometri:", buttonAntropometri);
-    console.log("antropometri:", antropometri);
-    console.log("pengukuran antropometri:", pengukuranAntropometri);
-
     buttonPanduan.addEventListener("click", (event) => {
       this._togglePanduan(event, antropometri);
       pengukuranAntropometri.classList.remove("open");
@@ -22,12 +16,12 @@ const PengukuranAntropometri = {
     });
   },
 
-  _togglePanduan(event, antropometri, pengukuranAntropometri) {
+  _togglePanduan(event, antropometri) {
     event.stopPropagation();
     antropometri.classList.toggle("open");
   },
 
-  _toggleAntropometri(event, pengukuranAntropometri, antropometri) {
+  _toggleAntropometri(event, pengukuranAntropometri) {
     event.stopPropagation();
     pengukuranAntropometri.classList.toggle("open");
   },
