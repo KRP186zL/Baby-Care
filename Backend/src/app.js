@@ -2,6 +2,9 @@ const express = require("express");
 const app = express();
 const giziRoutes = require("./routes/giziRoutes");
 const port = 3000;
+const cors = require("cors");
+
+app.use(cors());
 
 // Middleware untuk mengizinkan akses ke gambar
 app.use("/images", express.static("images"));

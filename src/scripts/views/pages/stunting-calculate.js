@@ -10,7 +10,7 @@ const inputUmur = formStunting.umur;
 const inputTinggi = formStunting.tinggi;
 const inputNama = formStunting.nama;
 const inputGender = formStunting.jk;
-console.log(hasil);
+
 
 formStunting.addEventListener("submit", (event) => {
   event.preventDefault();
