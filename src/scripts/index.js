@@ -1,6 +1,7 @@
 import "regenerator-runtime";
 import "../styles/styles.css";
 import App from "./views/app";
+import "./views/pages/stunting-calculate";
 
 const app = new App({
   button: document.querySelector("#hamburgerButton"),
