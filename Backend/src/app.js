@@ -1,14 +1,10 @@
 const express = require('express');
-const app = express()
+const app = express();
 const giziRoutes = require('./routes/giziRoutes');
 const port = 3000;
 
-app.use(express.json());
-app.use(express.urlencoded({extended: true}));
-
-app.get('/', (req, res) => {
-    res.send('hello world')
-});
+// Middleware untuk mengizinkan akses ke gambar
+app.use('/images', express.static('images'));
 
 app.use('/api', giziRoutes);
 
@@ -19,8 +15,8 @@ app.use((err, req, res, next) => {
       status: 'error',
       message: 'Terjadi kesalahan pada server'
     });
-  });
+});
 
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
+    console.log(`Server berjalan di http://localhost:${port}`);
 });
