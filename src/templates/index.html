@@ -51,22 +51,26 @@
                         <ol>
                             <li>Persiapan Alat:
                                 <ul>
-                                    <li>Pastikan timbangan berada di permukaan yang datar dan stabil.</li>
-                                    <li>Pastikan ukuran timbangan dimulai dari 0</li>
+                                    <li><b>Infantometer</b>: Untuk mengukur panjang badan anak di bawah 2 tahun (yang belum bisa berdiri tegak).</li>
+                                    <li><b>Stadiometer</b>: Untuk mengukur tinggi badan anak usia 2 tahun ke atas (yang sudah bisa berdiri tegak).
+                                    </li>
                                 </ul>
                             </li>
                             <li>
-                                Posisi Anak:
+                                Pengukuran Panjang Badan untuk Anak di Bawah 2 Tahun
                                 <ul>
-                                    <li>Untuk anak di bawah 2 tahun, timbang anak dalam posisi telentang di atas timbangan bayi.</li>
-                                    <li>Untuk 2 tahun ke atas, pastikan anak berdiri tegak di tengah timbangan dengan pakaian seminimal mungkin untuk akurasi maksimal.</li>
+                                    <li><b>Posisi Anak</b>: Baringkan anak telentang di atas infantometer.</li>
+                                    <li><b>Posisi Kepala</b>: Pastikan kepala anak menempel pada ujung infantometer dan kepala dalam posisi rata (melihat ke atas).</li>
+                                    <li><b>Posisi Kaki</b>: Pegang kaki anak dengan lembut dan tarik perlahan hingga lurus, pastikan telapak kaki tegak lurus terhadap papan pengukur.</li>
+                                    <li><b>Pengukuran</b>: Baca skala yang sejajar dengan tumit anak untuk mendapatkan panjang badan.</li>
                                 </ul>
                             </li>
                             <li>
-                                Pengukuran:
+                                Pengukuran Tinggi Badan untuk Anak Usia 2 Tahun ke Atas
                                 <ul>
-                                    <li>Bacalah berat badan anak yang ditampilkan pada timbangan.</li>
-                                    <li>Catat hasil pengukuran dengan akurat.</li>
+                                    <li><b>Posisi Anak</b>: Anak berdiri tegak di atas stadiometer tanpa alas kaki.</li>
+                                    <li><b>Posisi Tubuh</b>: Pastikan tumit, bokong, dan punggung anak menempel pada stadiometer. Kepala harus dalam posisi rata (melihat ke depan).</li>
+                                    <li><b>Pengukuran</b>: Turunkan pengukur kepala hingga menyentuh puncak kepala anak dan baca skala yang sejajar dengan pengukur kepala.</li>
                                 </ul>
                             </li>
                         </ol>
@@ -103,40 +107,40 @@
 
     <!-- ini halaman Stunting Calculate -->
     <section class="stunting-calculate" id="stuntingCalculate">
-        <form class="form-stunting" id="stuntingTinggi">
-            <div class="section_container stunting_container">
-                <h2 class="section_header">Stunting Calculate</h2>
-                <p class="section_subheader">
-                    Hitung Stunting si kecil
-                </p>
+        <div class="section_container stunting_container">
+            <h2 class="section_header">Stunting Calculate</h2>
+            <p class="section_subheader">
+                Hitung Stunting si kecil
+            </p>
+            <form class="form-stunting" id="formStunting">
                 <div class="stunting_form">
                     <div class="form-group">
                         <label for="nama">Nama</label>
-                        <input type="text" id="nama" name="nama" placeholder="Nama">
+                        <input required type="text" id="nama" name="nama" placeholder="Nama">
                     </div>
                     <div class="form-group">
                         <label for="umur">Usia (0-60)</label>
-                        <input type="number" min="0" max="60" id="umur" name="umur" placeholder="Bulan">
+                        <input required type="number" min="0" max="60" id="umur" name="umur" placeholder="Bulan">
                     </div>
                     <div class="form-group">
                         <label for="tinggi">Tinggi</label>
-                        <input type="text" id="tinggi" name="tinggi" placeholder="CM">
+                        <input required type="text" id="tinggi" name="tinggi" placeholder="CM">
                     </div>
                     <div class="form-group radio">
                         <label>Jenis Kelamin</label>
                         <div>
-                            <input type="radio" id="jk_lk" name="jk" value="lk">
+                            <input required type="radio" id="jk_lk" name="jk" value="lk">
                             <label for="jk_lk">Laki-Laki</label>
                         </div>
                         <div>
-                            <input type="radio" id="jk_pr" name="jk" value="pr">
+                            <input required type="radio" id="jk_pr" name="jk" value="pr">
                             <label for="jk_pr">Perempuan</label>
                         </div>
                     </div>
                 </div>
-                <button type="button" class="btn_hitung" id="hitungStunting">Hitung</button>
-            </div>
-        </form>
+                <button type="submit" class="btn_hitung" id="hitungStunting">Hitung</button>
+            </form>
+        </div>
         <div class="hasil" id="hasil"></div>
     </section>
     

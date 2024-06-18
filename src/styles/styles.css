@@ -304,7 +304,6 @@ body {
 /* ini akhir css halaman antropometri */
 
 /* ini css halaman stunting calculate */
-/* General styles */
 .stunting-calculate {
   background-image: linear-gradient(
     to bottom,
@@ -379,8 +378,87 @@ label {
 .btn_hitung:hover {
   background-color: var(--secondary-color);
 }
-
 /* ini akhir css halaman stunting calculate */
+
+/* ini css halaman hasil stunting */
+.hasil-container {
+  max-width: var(--max-widht);
+  margin: auto;
+  border: 5px solid var(--secondary-color);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.hasil-header {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 800;
+  font-family: var(--header-font);
+  text-align: center;
+}
+
+.hasil-subheader {
+  font-family: var(--header-font);
+  margin: auto;
+}
+
+.hasil-subheader p {
+  margin-top: 0.5rem;
+}
+
+.hasil-subheader p:first-of-type {
+  text-align: center;
+}
+
+.hasil-subheader span.stunting-parah {
+  background-color: red;
+  padding: 0.1rem;
+  border-radius: 5px;
+}
+
+.hasil-subheader span.stunting {
+  background-color: orange;
+  padding: 0.1rem;
+  border-radius: 5px;
+}
+
+.hasil-subheader span.normal {
+  background-color: green;
+  padding: 0.1rem;
+  border-radius: 5px;
+}
+
+.hasil-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.hasil-content_data {
+  width: 400px;
+}
+.hasil-content_data p {
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.hasil-content_data span.text {
+  background-color: var(--secondary-color);
+  padding: 0.3rem;
+  border-radius: 5px;
+}
+
+.hasil-content_data p:nth-child(even) {
+  text-align: right;
+}
+.hasil-content-image {
+  width: 350px;
+}
+.hasil-content-image img {
+  width: 100%;
+}
+/* ini akhir css halaman hasil stunting */
 
 /* ini css halaman gizi */
 .gizi {
