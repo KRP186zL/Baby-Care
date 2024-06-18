@@ -2,6 +2,7 @@ const {
   dataLakiLaki,
   dataPerempuan,
 } = require("../../data/local//data-stunting");
+const Swal = require("sweetalert2");
 
 const hasil = document.querySelector("#hasil");
 const formStunting = document.querySelector("#formStunting");
@@ -17,7 +18,11 @@ formStunting.addEventListener("submit", (event) => {
   const isNumber = (value) => {
     value = value.replace(/,/g, ".");
     if (isNaN(value)) {
-      alert("Tinggi harus berupa angka");
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Tinggi badan harus berupa angka",
+      });
       hasil.innerHTML = "";
       return false;
     }
