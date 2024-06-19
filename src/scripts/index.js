@@ -1,4 +1,3 @@
-import "regenerator-runtime";
 import "../styles/styles.css";
 import App from "./views/app";
 import "./views/pages/stunting-calculate";
@@ -23,8 +22,6 @@ const getGizidata = async () => {
     const Apigizi = await response.json();
     let giziElement = "";
     Apigizi.data.forEach((gizi) => {
-      // const imageUrl = `https://restaurant-api.dicoding.dev/images/medium/${gizi.pictureId}`;
-
       giziElement += `
       <div class="gizi_card">
                         <div class="gizi_image">
