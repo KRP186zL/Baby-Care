@@ -520,22 +520,6 @@ label {
   color: var(--secondary-color);
   text-align: center;
 }
-
-/* .gizi_btn {
-  padding: 0.75rem 1rem;
-  outline: none;
-  font-size: 1rem;
-  color: var(--white);
-  background-color: transparent;
-  border: 1px solid var(--white);
-  cursor: pointer;
-  border-radius: 10px;
-}
-.gizi_btn:hover {
-  color: var(--white);
-  background-color: var(--secondary-color);
-  transition: 0.3s;
-} */
 /* ini akhir css halaman gizi */
 
 /* ini css halaman blogs */
@@ -728,64 +712,7 @@ label {
   bottom: 0;
 }
 
-/* ini akhir css halaman about */
 
-/* ini css halaman contact */
-/* .contact {
-  background-image: linear-gradient(
-    to top,
-    rgba(255, 255, 255, 0.05),
-    transparent
-  );
-}
-
-.contact_container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  align-items: center;
-}
-
-.contact_card {
-  max-width: 250px;
-  margin: auto;
-  aspect-ratio: 1;
-  display: grid;
-  place-content: center;
-  text-align: center;
-  border: 1px solid var(--extra-light);
-  border-radius: 100%;
-  cursor: pointer;
-}
-
-.contact_card span {
-  margin-bottom: 1rem;
-  font-size: 2rem;
-  transition: 0.3s;
-}
-
-.contact_card:hover span {
-  color: var(--secondary-color);
-}
-
-.contact_col h4 {
-  margin-bottom: 1rem;
-  font-size: 2.5rem;
-  font-weight: 800;
-  font-family: var(--header-font);
-}
-
-.contact_col h5 {
-  margin-bottom: 0.5rem;
-  font-size: 1.5rem;
-  font-weight: 600;
-  font-family: var(--header-font);
-}
-
-.contact_card .emailtxt {
-  font-size: 15px;
-} */
-/* ini akhri css halaman contact */
 
 /* ini css halaman footer */
 .footer {
@@ -983,12 +910,4 @@ label {
   .about_grid {
     grid-template-columns: repeat(1, 1fr);
   }
-
-  /* .contact_container {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .contact_col:first-child {
-    grid-area: unset;
-  } */
 }
