@@ -8,3 +8,9 @@ ANGGOTA :
 - KRISNA RIZKI PRATAMA - F4276YB090
 - AFIF RAHMAN - F1326YB169
 - RHEXY PHASA DWI OLIVIA - F2846XB231
+
+## Live Demo
+[Baby Care](https://krp186zl.github.io/Baby-Care/)
+
+## BACKEND
+[Baby Care BE](https://github.com/KRP186zL/BE-Baby-Care)
